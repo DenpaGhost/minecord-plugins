@@ -1,0 +1,16 @@
+{
+  "name": "minecord-plugins",
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.9"
+  },
+  "dependencies": {
+    "minecord": "^0.0.25"
+  },
+  "scripts": {
+    "compile": "babel src -d out"
+  }
+}
