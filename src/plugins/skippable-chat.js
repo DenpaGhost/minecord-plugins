@@ -1,4 +1,4 @@
-import Replacers from "minecord/lib/Replacers";
+import Replacers from "../Replacers";
 
 const replacers = new Replacers()
   .add(/^<(.*?)>\s(.*)$/, (message, player, text) => `**${player}**: ${text}`)
@@ -23,7 +23,7 @@ export default (Plugin) =>
         message.includes("[unsend-discord]")
       )
         return;
-
+      console.dir(message);
       const newMessage = replacers.replace(message);
       if (newMessage !== false) await sendToDiscord(newMessage);
     },
